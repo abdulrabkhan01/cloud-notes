@@ -360,6 +360,80 @@ any EC2 instance it will handle all inbound and outbound traffic rules.
 </ul>
 
 <h4>7 AWS - EBS (Elastic Block Storage)</h4>
+AWS Service that act as virtual hard drive, it provides peristent block storage volumes for EC2 instances.
+Different type of EBS. It automatically replicated within its Availability Zone to provide high availability and durability.
+
+<table>
+<tr class="table-header">
+    <th> Volume Type</th>
+    <th> General Purpose SSD (Solid State Drive)</th>
+    <th> Provisioned IOPS SSD </th>
+    <th> Throughput Optimized HDD (Hard Disc Drive)</th>
+    <th> Cold HDD</th>
+    <th> EBS Magnetic</th>
+</tr>
+<tr>
+    <td  class="item-type">
+        Description
+    </td>
+    <td>
+        General Purpose SSD Volume that balances price and performance.
+    </td>
+    <td>
+        Highest permissions SSD for mission critical apps.
+    </td>
+    <td>
+       Low Cost HDD volume for frequently accessed, Throughput intensive workloads.
+    </td>
+    <td>
+        Lowest Cost HDD volume for less frequently accessed workloads.
+    </td>
+    <td>
+        Previous generation HDD
+     </td>
+</tr>
+<tr>
+    <td  class="item-type">
+        Use Cases
+    </td>
+    <td>
+        Most workloads
+    </td>
+    <td>
+        Databases
+    </td>
+    <td>
+       Big Data & Data warhouses
+    </td>
+    <td>
+        File Servers.
+    </td>
+    <td>
+        Infrequently accessed workloads
+     </td>
+</tr>
+<tr>
+    <td  class="item-type">
+       IOPS
+    </td>
+    <td>
+        16000
+    </td>
+    <td>
+        64000
+    </td>
+    <td>
+       500
+    </td>
+    <td>
+       250
+    </td>
+    <td>
+        40-200
+     </td>
+</tr>
+</table>
+
 <h4>8 AWS - Cloud Watch</h4>
 <h4>9 AWS - RDS (Relational Database Service)</h4>
 <h5> Relational Database Services</h5>
