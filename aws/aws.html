@@ -6,55 +6,243 @@
           font-family: arial, sans-serif;
           border-collapse: collapse;
           width: 100%;
+          font-size: 15px;
         }
         
         td, th {
-          border: 1px solid #dddddd;
+          border: 1px solid black;
           text-align: left;
           padding: 8px;
         }
-        
-        tr:nth-child(even) {
-          background-color: #dddddd;
+        .you-manage {
+            background-color: yellow;
         }
+
+        .item-type {
+            background-color: wheat;
+        }
+        .cloud-manage {
+            background-color: greenyellow;
+        }
+        .table-header {
+            background-color: aqua;
+        }
+        
+        /** tr:nth-child(even) {
+          background-color: #dddddd;
+        }**/
         </style>
 </head>
 </body>
 <h3> What is Cloud Computing</h3>
+<p> Usually every company is having its own data center, but creating and managing the 
+    datacenter, servers and all hardware is an extra burden for the organizations,
+    so cloud computing solves this problem by providing these
+    datacenter and hardward capabilities as a service.
+</p>
+<h3> Cloud Computing Providers</h3>
+Following are some of the cloud computing Providers
+<ul>
+    <li> AWS by Amazon</li>
+    <li> GCP by Google</li>
+    <li> Azure by Microsoft</li>
+    <li> OCP by Oracle</li>
+</ul>
 <h3> What is AWS</h3>
-<h3> What are other Cloud Computing Providers</h3>
+<p> AWS stands for Amazon web services which provide different cloud computing services, it is one
+    of the leading cloud computing provider.
+</p>
 <h3> Important Cloud Concepts</h3>
 <ul>
     <li>IAAS - Infrastructure as a Service</li>
     <li>PAAS - Platform as a Service</li>
     <li>SAAS - Software as Service</li>
-    <li>Load Balancers and Types</li>
-    <li>Edge Servers</li>
-    <li>Horizontal Scaling</li>
+     <li>Horizontal Scaling</li>
     <li>Vertical Scaling</li>
     <li>Server Less Architecture</li>
 </ul>
 <h4> IAAS vs PAAS vs SAAS </h4>
     <table>
-        <tr>
+        <tr class="table-header">
+        <th>Thing to be Managed</tj>
         <th>On Premise</th>
-        <th> IAAS </th>
-        <th>PAAS</th>
-        <th> SAAS</th>
+        <th> IAAS - Infrastructure as a Service </th>
+        <th>PAAS - Platform as a Service</th>
+        <th> SAAS - Software as Service</th>
     </tr>
     <tr>
-        <td> You manage everything as defined below in On Premise </td>
-        <td> Infrastructure as a Service,<br> you need to manage following things highligted in yellow</td>
+        <td class="item-type">
+            Applications
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Data
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Runtime
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Middleware
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            OS
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Virtualization
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Services
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Storage
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+    </tr>
+    <tr>
+        <td class="item-type">
+            Networking
+        </td>
+        <td class="you-manage">
+            You Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
+        <td class="cloud-manage">
+            Cloud Provider Manage
+        </td>
     </tr>
     
     </table>
 
-<h4> Types of Cloud </h4>
 <ul>
-    <li>Public Cloud</li>
-    <li>Private Cloud</li>
-    <li>Hybrid Cloud</li>
+    <li>Public Cloud - Accessible over internet</li>
+    <li>Private Cloud - Accessible over VPN </li>
+    <li>Hybrid Cloud - Combination of Public and Private Clouds</li>
 </ul>
+<h4> Scaling concepts</h4>
+<ul>
+    <li>Scaling up - Adding more resources to a single VM or instance, eg. Increase RAM capacity</li>
+    <li>Scaling down -Reducing the size of a resource in single VM or instance, eg. Decrease RAM </li>
+    <li>Scaling out - Increasing the number of VMs to make them work in parallel to distribute the high traffic</li>
+    <li>Scaling in - Decreaing the number of VMs when load decreases</li>
+    <li>Autoscaling - Automatically handling scaling out/in using rules/policies etc.</li>
+</ul>
+<h4> What is Server Less Architecture</h4>
+It is a way to build and run applications without having to manage the Infrastructure, this comes
+under Software as a Service concept.
+
 <h3> What are Differnt AWS Services</h3>
 <h4> IAM - Identity & Access Management </h4>
 <h4> AWS Cloud Front</h4>
