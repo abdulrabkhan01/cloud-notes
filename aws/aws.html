@@ -254,16 +254,16 @@ under Software as a Service concept.
     <li><b>Availability</b> Zones: Data center inside a particular region</li>
 </ul>
 <h3> What are Differnt AWS Services</h3>
-<h4>0 IAM - Identity & Access Management </h4>
+<h4>1 IAM - Identity & Access Management </h4>
 <p>Specified who can access what using fine grained access management, it is used to provide Authentication and Authorization,
     it provides IAM policies to manage permissions on AWS Resources.
     <a href="https://aws.amazon.com/iam/">click here for more info</a>
 </p>
-<h4>1 AWS Cloud Front</h4>
+<h4>2 AWS Cloud Front</h4>
 <p> It is the Content Delivery Network (CDN) provided by AWS, it is used to provide the Edge Location
     that caches the data for fast retrieval.  <a href="https://aws.amazon.com/cloudfront/">click here for more info</a>
 </p> 
-<h4>2 AWS - S3 (Simple Storage Service) </h4>
+<h4>3 AWS - S3 (Simple Storage Service) </h4>
 <p> AWS S3 is highly secure, scalable & durable <mark>Object Storage Service</mark></p>
 <p>S3 is Object based, it uses Key/Value Pairs for storing the objects</p>
 <ul>
@@ -323,7 +323,7 @@ under Software as a Service concept.
                     <li>Can be used in conjunction of versioning</li>
                     <li>Can be applied to all versions</li>
                 </ul>
-<h4>3 AWS - EC2 (Elastic Compute Cloud) </h4>
+<h4>4 AWS - EC2 (Elastic Compute Cloud) </h4>
 EC2 is AWS Service used to provide resizable compute instances within minutes. Allowing to quickly Scale up and down.
 <h4>EC2 Pricing Models</h4>
 <ul>
@@ -333,7 +333,7 @@ EC2 is AWS Service used to provide resizable compute instances within minutes. A
     <li><b>Dedicated Hosts</b>: Physcical Servers dedicated for your use, possible to use your own licence and save costs.</li>
   </ul>
   
-<h4> Differnt Types of EC2 instances </h4>
+<h4>5 Differnt Types of EC2 instances </h4>
 <ul>
   <li><b>General Purpose</b>: Balance of computer memory, storage and network resources (Business critical, mid size database, web tiered applications.</li>
   <li><b>Compute Optimized</b>: Used for high performance computing like batch processing, video encoding etc.</li>
@@ -343,28 +343,41 @@ EC2 is AWS Service used to provide resizable compute instances within minutes. A
 </ul>
 
 
-<h4>4 AWS -ECS (Elastic Container Service) </4>
 
-<h4>5 AWS Security Groups</h4>
-<h4>6 AWS - EBS (Elastic Block Storage)</h4>
-<h4>7 AWS - Cloud Watch</h4>
-<h4>8 AWS - RDS (Relational Database Service)</h4>
+
+<h4>6 AWS Security Groups</h4>
+Used to control traffic to the AWS Resources, acts as a Virtual Firewall. Once you associate Security Group to
+any EC2 instance it will handle all inbound and outbound traffic rules.
+
+<ul>
+    <li> All Inbound traffic blocked by default </li>
+    <li> All Outbound traffic is allowed</li>
+    <li> Changes to Security Group take effect immediately</li>
+    <li> No restriction on number of EC2 instances in a Security Group</li>
+    <li> Also possible to attach multiple security groups to a singel EC2 instance</li>
+    <li> Security Groups are stateful</li>
+    <li> Security Groups cannot be used to block specific IP Address, use ACL(Access Control Lists) for it</li>
+</ul>
+
+<h4>7 AWS - EBS (Elastic Block Storage)</h4>
+<h4>8 AWS - Cloud Watch</h4>
+<h4>9 AWS - RDS (Relational Database Service)</h4>
 <h5> Relational Database Services</h5>
 <h5> Non Relational Database Services</h5>
 <h5> Red Shift </h5>
 <h5> Aurora</h5>
 <h5> Elastic Cache</h5>
-<h4>9 AWS Route 53</h4>
-<h4>10 AWS VPC</h4>
-<h4>11 AWS Cloud Formation</h4>
-<h4>12 AWS Elastic Beanstalk</h4>
-<h4>13 AWS SQS (Simple Queue Service)</h4>
-<h4>14 AWS SNS (Simple Notification Service)</h4>
-<h4>15 AWS Kinesis</h4>
-<h4>16 AWS Lambda</h4>
-<h4>17 AWS ECS (Elastic Container Service)</h4>
-<h4>18 AWS Snowball</h4>
-<h4>19 AWS SWF (Simple Workflow Service)</h4>
+<h4>10 AWS Route 53</h4>
+<h4>11 AWS VPC</h4>
+<h4>12 AWS Cloud Formation</h4>
+<h4>13 AWS Elastic Beanstalk</h4>
+<h4>14 AWS SQS (Simple Queue Service)</h4>
+<h4>15 AWS SNS (Simple Notification Service)</h4>
+<h4>16 AWS Kinesis</h4>
+<h4>17 AWS Lambda</h4>
+<h4>18 AWS ECS (Elastic Container Service)</h4>
+<h4>19 AWS Snowball</h4>
+<h4>20 AWS SWF (Simple Workflow Service)</h4>
 <p>
 
 </p>
