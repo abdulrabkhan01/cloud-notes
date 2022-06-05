@@ -1,5 +1,5 @@
 <html>
-<title> AWS Notes</title>
+<title> AWS Notes by Abdul Rab Khan</title>
 <head>
     <style>
         table {
@@ -227,52 +227,109 @@ Following are some of the cloud computing Providers
     </table>
 
 <ul>
-    <li>Public Cloud - Accessible over internet</li>
-    <li>Private Cloud - Accessible over VPN </li>
-    <li>Hybrid Cloud - Combination of Public and Private Clouds</li>
+    <li><b>Public Cloud</b> - Accessible over internet</li>
+    <li><b>Private Cloud</b> - Accessible over VPN </li>
+    <li><b>Hybrid Cloud</b> - Combination of Public and Private Clouds</li>
 </ul>
 <h4> Scaling concepts</h4>
 <ul>
-    <li>Scaling up - Adding more resources to a single VM or instance, eg. Increase RAM capacity</li>
-    <li>Scaling down -Reducing the size of a resource in single VM or instance, eg. Decrease RAM </li>
-    <li>Scaling out - Increasing the number of VMs to make them work in parallel to distribute the high traffic</li>
-    <li>Scaling in - Decreaing the number of VMs when load decreases</li>
-    <li>Autoscaling - Automatically handling scaling out/in using rules/policies etc.</li>
+    <li><b>Scaling up</b> - Adding more resources to a single VM or instance, eg. Increase RAM capacity</li>
+    <li><b>Scaling down</b> -Reducing the size of a resource in single VM or instance, eg. Decrease RAM </li>
+    <li><b>Scaling out</b> - Increasing the number of VMs to make them work in parallel to distribute the high traffic</li>
+    <li><b>Scaling in</b> - Decreaing the number of VMs when load decreases</li>
+    <li><b>Autoscaling</b> - Automatically handling scaling out/in using rules/policies etc.</li>
 </ul>
 <h4> What is Server Less Architecture</h4>
 It is a way to build and run applications without having to manage the Infrastructure, this comes
 under Software as a Service concept.
-
+<h4> Regions and Availability Zones</h4>
+<ul>
+    <li> <b>Region</b>: Physical Geographical location</li>
+    <li><b>Availability</b> Zones: Data center inside a particular region</li>
+</ul>
 <h3> What are Differnt AWS Services</h3>
-<h4> IAM - Identity & Access Management </h4>
-<h4> AWS Cloud Front</h4>
-<h4> AWS - S3 (Simple Storage Service) </h4>
-<h4> AWS - EC2 (Elastic Compute Cloud) </h4>
-<4> AWS -ECS (Elastic Container Service) </4>
+<h4>0 IAM - Identity & Access Management </h4>
+<p>Specified who can access what using fine grained access management, it is used to provide Authentication and Authorization,
+    it provides IAM policies to manage permissions on AWS Resources.
+    <a href="https://aws.amazon.com/iam/">click here for more info</a>
+</p>
+<h4>1 AWS Cloud Front</h4>
+<p> It is the Content Delivery Network (CDN) provided by AWS, it is used to provide the Edge Location
+    that caches the data for fast retrieval.  <a href="https://aws.amazon.com/cloudfront/">click here for more info</a>
+</p> 
+<h4>2 AWS - S3 (Simple Storage Service) </h4>
+<p> AWS S3 is highly secure, scalable & durable <mark>Object Storage Service</mark></p>
+<p>S3 is Object based, it uses Key/Value Pairs for storing the objects</p>
+<ul>
+    <li> <b> Key</b>: Name of the Object</li>
+    <li> <b> Value</b>: Actual File Data in bytes format</li>
+    <li> <b> Version Id</b>: Used for versioning</li>
+    <li> <b> Metadata</b>: Data related to the object stored</li>
+</ul> 
+<h4> Consistency for S3 Objects</h5>
+<ul>
+    <li><b>PUT</b>: Read after Write Consistency  ( able to read file immediately after storing to S3 bucket) </li>
+    <li><b>Overwrite PUT & DELETE</b>: Eventual Consistency</li>
+</ul>
+<h4> S3 Guarantee</h5>
+<ul>
+    <li><b>Availability</b>: 99.9% Guarantee </li>
+    <li><b>Durability</b>: 99.999999999% Guarantee (11 9s)</li>
+</ul>
+<h4> S3 Storage Classes</h5>
+    <ul>
+        <li><b>S3 Standard</b>: 99.99% Availability + 99.999999999% Durability + Redundancy (Sustain the loss of 2 facilities at the same time) </li>
+        <li><b>S3 IA (Infrequently Accessed)</b>: For Infrequently accessed data that should be available immediately when access, lower fee than Standard, but retrieval fee applies</li>
+        <li><b>S3 One Zone IA (Infrequently Accessed)</b>: Infrequently Accessed Data but only for single Availability Zone.</li>
+        <li><b>S3 Intelligent Tiering</b>: Automatically switch from higher cost to lower costs without impacting processing or performance.</li>
+        <li><b>S3 Glacior</b>: Low Cost Storage for less frequenty accessed data with retrieval times in minutes to hours.</li>
+        <li><b>S3 Glacior Deep Archive</b>: Low Cost Storage for less frequenty accessed data with retrieval times 12 hours acceptable.</li>
+    </ul>
+    <h4> S3 Restricting Bucket Access</h5>
+        <ul>
+            <li><b>Use Bucket Policies</b>:  These are the policies applied at the bucket level. </li>
+            <li><b>Use Object Policies</b>: These are the policies applied at the individual object level.</li>
+            <li><b>IAM Policies</b>: Group/User Level IAM policies</li>
+        </ul>
+        <h4> S3 Security & Encryption</h5>
+                Once S3 bukcet is created it is private by default, to setup access control use any of the below
+            <ul>
+                <li><b> Bucket Policies</b></li>
+                <li><b> Access Control List (ACL)</b></li>
+            </ul>
+            Encryption at Rest is achieved using the following options:
+            <ul>
+                <li><b> S3 Managed Keys</b></li>
+                <li><b>AWS Key management service</b></li>
+                <li><b>Server Side Encryption using Customer Provided Keys</b></li>
+            </ul>
+<h4>3 AWS - EC2 (Elastic Compute Cloud) </h4>
 <h5> Differnt Types of EC2 instances </h5>
 <ul>
     <li>    Instance Type1</li>
 </ul>
-<h4>AWS Security Groups</h4>
-<h4>AWS - EBS (Elastic Block Storage)</h4>
-<h4>AWS - Cloud Watch</h4>
-<h4>AWS - RDS (Relational Database Service)</h4>
+<h4>4 AWS -ECS (Elastic Container Service) </4>
+
+<h4>5 AWS Security Groups</h4>
+<h4>6 AWS - EBS (Elastic Block Storage)</h4>
+<h4>7 AWS - Cloud Watch</h4>
+<h4>8 AWS - RDS (Relational Database Service)</h4>
 <h5> Relational Database Services</h5>
 <h5> Non Relational Database Services</h5>
 <h5> Red Shift </h5>
 <h5> Aurora</h5>
 <h5> Elastic Cache</h5>
-<h4> AWS Route 53</h4>
-<h4> AWS VPC</h4>
-<h4> AWS Cloud Formation</h4>
-<h4> AWS Elastic Beanstalk</h4>
-<h4> AWS SQS (Simple Queue Service)</h4>
-<h4> AWS SNS (Simple Notification Service)</h4>
-<h4> AWS Kinesis</h4>
-<h4> AWS Lambda</h4>
-<h4> AWS ECS (Elastic Container Service)</h4>
-<h4> AWS Snowball</h4>
-<h4> AWS SWF (Simple Workflow Service)</h4>
+<h4>9 AWS Route 53</h4>
+<h4>10 AWS VPC</h4>
+<h4>11 AWS Cloud Formation</h4>
+<h4>12 AWS Elastic Beanstalk</h4>
+<h4>13 AWS SQS (Simple Queue Service)</h4>
+<h4>14 AWS SNS (Simple Notification Service)</h4>
+<h4>15 AWS Kinesis</h4>
+<h4>16 AWS Lambda</h4>
+<h4>17 AWS ECS (Elastic Container Service)</h4>
+<h4>18 AWS Snowball</h4>
+<h4>19 AWS SWF (Simple Workflow Service)</h4>
 <p>
 
 </p>
